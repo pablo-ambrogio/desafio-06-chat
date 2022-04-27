@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+/*
+- Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
+- Moderate Violet (chat on the left): hsl(276, 55%, 52%)
+- Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%)
+- Grayish Blue (placeholder text): hsl(206, 6%, 79%)
+- Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%)
+- Dark Grayish Violet (paragraph): hsl(270, 7%, 64%)
+*/
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  background: #f5f3f7;
+  z-index: -2;
+}
+.container::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 40%;
+  height: 85%;
+  background: radial-gradient(circle at top right, #e942ff, #8838ff);
+  margin-left: -10%;
+  border-radius: 0 0 50% 50%;
+  z-index: -1;
+}
+@media screen and (max-width: 43.75em) {
+  .container::before {
+    width: 100%;
+    height: 50%;
+    margin-left: -50%;
+  }
+}
+.container::after {
+  position: absolute;
+  inset: auto 0 0 auto;
+  content: "";
+  width: 40%;
+  height: 80%;
+  background: #d89eff;
+  border-radius: 50% 50% 0 0;
+  margin-right: -15%;
+  opacity: 0.1;
+  z-index: -1;
+}
+@media screen and (max-width: 43.75em) {
+  .container::after {
+    width: 100%;
+    height: 50%;
+    margin-right: -50%;
+  }
+}
+.container-phone-texts {
+  width: 60%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 48% 52%;
+  grid-template-rows: auto;
+  place-items: center flex-start;
+  margin: auto;
+  column-gap: 2rem;
+}
+@media screen and (max-width: 43.75em) {
+  .container-phone-texts {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.phone {
+  width: 100%;
+  height: auto;
+  max-width: 240px;
+  border: 10px solid #ffffff;
+  border-radius: 30px;
+  padding-bottom: 1rem;
+  position: relative;
+  background: #f5f3f7;
+  place-self: center;
+}
+.phone::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 55%;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 0 0 15px 15px;
+}
+.phone-header {
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0 0.5rem;
+  padding-bottom: 0.5rem;
+  column-gap: 0.4rem;
+  background: linear-gradient(to right, #8838ff, #e942ff);
+  box-sizing: border-box;
+  border-radius: 20px 20px 5px 5px;
+}
+.phone-main {
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.picture {
+  margin: 0;
+}
+.picture__img {
+  width: 28px;
+  height: auto;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+  box-sizing: border-box;
+}
+
+.person {
+  flex-grow: 1;
+}
+.person__name {
+  font-size: 0.8rem;
+  margin-top: 0;
+  margin-bottom: 3px;
+  color: #ffffff;
+  font-weight: 400;
+}
+.person__condition {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: lighter;
+  font-size: 0.5rem;
+  color: #f5f3f7;
+}
+
+.header__arrow {
+  transform: rotate(180deg);
+  margin-bottom: 0.5rem;
+}
+.header__arrow-img {
+  width: 20px;
+  height: auto;
+  fill: #ffffff;
+}
+
+.ellipsis__img {
+  fill: #ffffff;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+  justify-self: flex-end;
+}
+
+.message {
+  width: 58%;
+  height: auto;
+  border-radius: 12px 12px 12px 3px;
+  padding: 0.4rem;
+  padding-left: 0.5rem;
+  background: rgba(216, 158, 255, 0.2);
+}
+.message--me {
+  align-self: flex-end;
+  border-radius: 12px 12px 3px 12px;
+  background-color: #ffffff;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.message--me + .message--me {
+  width: max-content;
+}
+.message--walk {
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #e942ff, #8838ff);
+  color: #ffffff;
+  padding: 0.5rem;
+}
+.message .walk-one__circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+.message__walk-one {
+  margin-right: 0.5rem;
+}
+.message__walk-two {
+  flex-grow: 1;
+}
+.message__walk-three {
+  text-align: center;
+}
+.message__text {
+  font-size: 0.6rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #9241c8;
+}
+.message__text--span {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.message__text--walk {
+  color: #f5f3f7;
+}
+.message-photo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.message-photo__picture {
+  margin: 0;
+}
+.message-photo__img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  vertical-align: middle;
+}
+
+.insert__message {
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 0.5rem;
+  position: relative;
+}
+.insert__message-text {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  padding: 0.8rem 0.5rem 0.8rem 0.8rem;
+  border: none;
+  outline: none;
+  font-size: 0.6rem;
+}
+.insert__message-text::placeholder {
+  font-size: 0.6rem;
+  margin: 0;
+}
+.insert__message-send {
+  width: auto;
+  height: auto;
+  position: absolute;
+  inset: 50% 0 auto auto;
+  margin-right: 0.5rem;
+  transform: translateY(-50%);
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #3e2753;
+}
+.insert__message-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 43.75em) {
+  .booking {
+    text-align: center;
+  }
+}
+.booking__title {
+  color: #3e2753;
+  font-size: 2.5rem;
+}
+.booking__text {
+  color: #a39daa;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

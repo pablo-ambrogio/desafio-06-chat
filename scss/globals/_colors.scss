@@ -1,0 +1,53 @@
+/*
+- Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
+- Moderate Violet (chat on the left): hsl(276, 55%, 52%)
+- Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%)
+- Grayish Blue (placeholder text): hsl(206, 6%, 79%)
+- Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%)
+- Dark Grayish Violet (paragraph): hsl(270, 7%, 64%)
+*/
+
+$pale-violet: #d89eff;
+$moderate-violet: #9241c8;
+$dark-violet: #6e5d7e;
+$grayish-blue: #c6cacd;
+$very-dark-violet: #3e2753;
+$dark-grayish-violet: #a39daa;
+
+$primary: (
+    'primary-violet': $pale-violet,
+    'primary-moderate-violet': $moderate-violet,
+    'primary-dark-violet': $dark-violet,
+    'primary-grayish-blue': $grayish-blue,
+    'primary-very-dark-biolet': $very-dark-violet,
+    'primary-dark-grayish-violet': $dark-grayish-violet,
+);
+
+// secondary
+
+$white: #ffffff;
+$light-grayish-violet: #f5f3f7;
+$very-dark-desaturated-violet: #3e2753;
+$very-light-magenta: #e570ff;
+
+$secondary: (
+    'secondary-white': $white,
+    'secondary-violet': $light-grayish-violet,
+    'secondary-dark-violet': $very-dark-desaturated-violet,
+    'secondary-magenta': $very-light-magenta,
+);
+
+// gradients
+
+$light-magenta: #e942ff;
+$light-violet: #8838ff;
+
+$gradients: (
+    'gradients-magenta': $light-magenta,
+    'gradients-violet': $light-violet,
+);
+
+
+
+
+
