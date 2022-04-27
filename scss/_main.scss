@@ -19,7 +19,7 @@ body{
     position: relative;
     overflow: hidden;
     background: map-get(color.$secondary, secondary-violet);
-    z-index: -2;
+    // z-index: -2;
 
     @include bp.breakpoint (ms) {
         padding: 2rem 0;
@@ -31,9 +31,10 @@ body{
         inset: 0;
         @include mx.width-height(40%, 85%);
         background: radial-gradient(circle at top right, map-get( color.$gradients, gradients-magenta), map-get(color.$gradients, gradients-violet));
-        margin-left: -10%;
+        margin-left: -11%;
         border-radius: 0 0 50% 50%;
-        z-index: -1;
+        // z-index: -1;
+        pointer-events: none;
 
         @include bp.breakpoint(ms) {
             @include mx.width-height(100%, 50%);
@@ -47,12 +48,13 @@ body{
         // inset-block-end: 0;
         // inset-inline-end: 0;
         content: '';
-        @include mx.width-height(40%, 80%);
+        @include mx.width-height(50%, 80%);
         background: map-get( color.$primary , primary-violet);
-        border-radius: 50% 50% 0 0;
-        margin-right: -15%;
+        border-radius: 40% 40% 0 0;
+        margin-right: -27%;
         opacity: .1;
-        z-index: -1;
+        // z-index: -1;
+        pointer-events: none;
 
         @include bp.breakpoint(ms) {
             @include mx.width-height(100%, 50%);
@@ -83,6 +85,7 @@ body{
     position: relative;
     background: map-get(color.$secondary, secondary-violet);
     place-self: center;
+    z-index: 1;
 
     &::before {
         position: absolute;
