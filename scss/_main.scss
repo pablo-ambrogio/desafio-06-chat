@@ -6,9 +6,9 @@ body{
     @include mx.width-height(100%, 100vh);
     @include mx.d-flex(row, center, center);
 
-    // @include bp.breakpoint(ms){
-    //     height: auto;
-    // }
+    @include bp.breakpoint(ms){
+        height: auto;
+    }
 }
 
 .container {
@@ -20,6 +20,10 @@ body{
     overflow: hidden;
     background: map-get(color.$secondary, secondary-violet);
     z-index: -2;
+
+    @include bp.breakpoint (ms) {
+        padding: 2rem 0;
+    }
 
     &::before {
         position: absolute;

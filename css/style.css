@@ -20,6 +20,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 43.75em) {
+  body {
+    height: auto;
+  }
+}
 
 .container {
   width: 100%;
@@ -34,6 +39,11 @@ body {
   overflow: hidden;
   background: #f5f3f7;
   z-index: -2;
+}
+@media screen and (max-width: 43.75em) {
+  .container {
+    padding: 2rem 0;
+  }
 }
 .container::before {
   position: absolute;
